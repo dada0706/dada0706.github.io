@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Gallery</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+    <div class="logo-container">
+      <img src="https://i.pinimg.com/736x/8d/5d/db/8d5ddba18226ec27dff50b244617471f.jpg" alt="Event Logo" class="logo">
+      <h1>KRL</h1>
+      <!-- Hamburger Icon -->
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+      
+      <nav class="navbar" id="navMenu">
+        <ul class="nav-left">
+          <li><a href="webs.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+        <div class="logo">
+          <span>KRL <span class="highlight">events</span></span>
+        </div>
+        <ul class="nav-right">
+          <li><a href="packages.html">Packages</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      
+      <div class="auth-buttons">
+        <button onclick="location.href='login.html'">Login</button>
+        <button onclick="location.href='signup.html'">Signup</button>
+      </div>
+    </div>
+  </header>
+
+<main>
+    <h2>Event Gallery</h2>
+    <div class="filter-buttons">
+        <button onclick="filterGallery('all')">All</button>
+        <button onclick="filterGallery('decor')">Decor</button>
+        <button onclick="filterGallery('food')">Food</button>
+        <button onclick="filterGallery('venue')">Venue</button>
+    </div>
+
+    <div class="gallery">
+        <!-- Decor Images -->
+        <div class="item decor">
+            <img src="https://i.pinimg.com/736x/09/5f/b1/095fb1b40072beabd950b6df1ee095b1.jpg" alt="Elegant Table Setup" />
+        </div>
+        <div class="item decor">
+            <img src="https://i.pinimg.com/474x/76/68/ef/7668eff2b6c55b50ac568dbd8dd317ba.jpg" alt="Floral Centerpiece" />
+        </div>
+        <div class="item decor">
+            <img src="https://i.pinimg.com/474x/76/9f/2d/769f2dc2b2b08ebc9ba5c5da2cb021a4.jpg" alt="Romantic Lighting" />
+        </div>
+        <div class="item decor">
+            <img src="https://i.pinimg.com/474x/5c/c4/7c/5cc47c9e5f72a94e675cfaec9307645a.jpg" alt="Luxury Stage Design" />
+        </div>
+        <div class="item decor">
+            <img src="https://i.pinimg.com/736x/86/bc/12/86bc12be59cc0d2cbd0ffba8fc8c3e1e.jpg" alt="Wedding Arch" />
+        </div>
+        <div class="item decor">
+            <img src="https://i.pinimg.com/736x/33/a4/18/33a418655ce60901234013d1f3d38d2f.jpg" alt="Outdoor Floral Setup" />
+        </div>
+       <div class="item decor">
+            <img src="https://i.pinimg.com/736x/08/3a/1a/083a1a80b97e1dbec8c16de5ae9d135c.jpg" alt="Outdoor Floral Setup" />
+        </div>
+        <!-- Food Images -->
+        <div class="item food">
+            <img src="https://i.pinimg.com/474x/51/d7/ed/51d7ed32fed0f43b94c6a2632d035a72.jpg" alt="Luxury Cuisine" />
+        </div>
+        <div class="item food">
+            <img src="https://i.pinimg.com/736x/29/6c/e8/296ce85a2f3cee7964ee58bb393db5da.jpg" alt="Chocolate Fountain" />
+        </div>
+        <div class="item food">
+            <img src="https://i.pinimg.com/474x/64/61/ae/6461ae65d6fd5fe2c1b645054f6a8886.jpg" alt="Dessert Table" />
+        </div>
+        <div class="item food">
+            <img src="https://i.pinimg.com/474x/57/cd/dd/57cddd925ee9c23164c2cfb69faf0e92.jpg" alt="Cocktail Bar" />
+        </div>
+        <div class="item food">
+            <img src="https://i.pinimg.com/474x/88/50/ea/8850ea685cf18e8ad48758a6164269a1.jpg" alt="Buffet Spread" />
+        </div>
+        <div class="item food">
+            <img src="https://i.pinimg.com/474x/e7/13/d0/e713d0679cf270e93beb6889102181e7.jpg" alt="Appetizer Platter" />
+        </div>
+		<div class="item decor">
+            <img src="https://i.pinimg.com/474x/ea/25/92/ea25925cb45854f0abc2ac542e9e5af4.jpg" alt="Appetizer Platter" />
+        </div>
+		<div class="item food">
+            <img src="https://i.pinimg.com/474x/85/20/50/8520506e38ed9da4627336e1b9837c5f.jpg" alt="Appetizer Platter" />
+        </div>
+
+        <!-- Venue Images -->
+        <div class="item venue">
+            <img src="https://i.pinimg.com/474x/02/1f/ab/021fabf24c9c2052020f012f681b69d4.jpg" alt="Grand Ballroom" />
+        </div>
+        <div class="item venue">
+            <img src="https://i.pinimg.com/474x/ed/f2/20/edf22041e57ac03f612b3c68076775a5.jpg" alt="Outdoor Wedding Setup" />
+        </div>
+        <div class="item venue">
+            <img src="https://i.pinimg.com/736x/4d/e2/53/4de253bb03b072ff395d6d0d9f0eed10.jpg" alt="Rooftop Event Space" />
+        </div>
+        <div class="item venue">
+            <img src="https://i.pinimg.com/736x/a6/66/db/a666dbe5fdca7834fd62a53eb039c6f0.jpg" alt="Beachfront Ceremony" />
+        </div>
+		 <div class="item venue">
+            <img src="https://i.pinimg.com/474x/aa/9f/63/aa9f634a1798d05237186639a305f3cd.jpg" alt="Elegant Table Setup" />
+        </div>
+		 <div class="item venue">
+            <img src="https://i.pinimg.com/474x/5f/75/2a/5f752acbe1e959ed5d0836fb4b4044d4.jpg" alt="Elegant Table Setup" />
+        </div>
+    </div>
+</main>
+<section id="social-section">
+    <div class="logo-thought">
+        <div class="logo-left">
+            <span class="krl">KRL</span>
+            <span class="events">events</span>
+        </div>
+        <div class="logo-divider"></div>
+        <div class="logo-right">
+            <span>growth &</span><br>
+            <span>event planning</span><br>
+            <span>solutions for all</span>
+        </div>
+    </div>
+    <h3>STAY SOCIAL</h3>
+    <h2>Follow Us On Instagram</h2>
+    <div class="social-images">
+        <a href="https://instagram.com/youreventpage" target="_blank">
+            <img src="https://i.pinimg.com/736x/48/c3/1d/48c31da3a8bcce6bd265b3d106154e70.jpg" alt="Event 1">
+        </a>
+        <a href="https://instagram.com/youreventpage" target="_blank">
+            <img src="https://i.pinimg.com/736x/3d/93/83/3d9383bff4d1e934947be5177cc56ef6.jpg" alt="Event 2">
+        </a>
+        <a href="https://instagram.com/youreventpage" target="_blank">
+            <img src="https://i.pinimg.com/736x/0a/3f/79/0a3f79a2dab7347a63a1052caa7dc244.jpg" alt="Event 3">
+        </a>
+    </div>
+</section>
+<div class="footer-container">
+    <p>COPYRIGHT © 2025 KRL EVENTS</p>
+    <div class="footer-logo">
+        <p>WEDDINGS & EVENTS<br>Kurnool, Andhra Pradesh</p>
+        <p>ESTD 1995</p>
+    </div>
+</div>
+
+<script>
+    function filterGallery(category) {
+        const items = document.querySelectorAll('.gallery .item');
+        items.forEach(item => {
+            if (category === 'all' || item.classList.contains(category)) {
+                item.style.display = 'block';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    }
+</script>
+
+</body>
+</html>

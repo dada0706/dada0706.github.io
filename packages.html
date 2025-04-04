@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Packages</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <div class="logo-container">
+      <img src="https://i.pinimg.com/736x/8d/5d/db/8d5ddba18226ec27dff50b244617471f.jpg" alt="Event Logo" class="logo">
+      <h1>KRL</h1>
+      <!-- Hamburger Icon -->
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+      
+      <nav class="navbar" id="navMenu">
+        <ul class="nav-left">
+          <li><a href="webs.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+        <div class="logo">
+          <span>KRL <span class="highlight">events</span></span>
+        </div>
+        <ul class="nav-right">
+          <li><a href="packages.html">Packages</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      
+      <div class="auth-buttons">
+        <button onclick="location.href='login.html'">Login</button>
+        <button onclick="location.href='signup.html'">Signup</button>
+      </div>
+    </div>
+  </header>
+<section class="packages-section">
+    <h2>Choose Your Event Package</h2>
+    <div class="packages-grid">
+        <div class="package-card basic">
+            <span class="icon">🎈</span>
+            <h3>Basic Package</h3>
+            <p>✅ Decoration + Venue</p>
+            <p class="price">INR50,000</p>
+            <div class="package-details">
+                <ul>
+                    <li>✅ Basic table setup</li>
+                    <li>✅ Venue arrangement</li>
+                    <li>✅ Simple decoration</li>
+                </ul>
+            </div>
+            <a href="booking.html" class="book-now-btn">Book Now</a>
+        </div>
+
+        <div class="package-card premium">
+            <span class="icon">🍽️</span>
+            <h3>Premium Package</h3>
+            <p>✅ Decoration + Venue + Catering</p>
+            <p class="price">INR1,20,000</p>
+            <div class="package-details">
+                <ul>
+                    <li>✅ Decoration with floral theme</li>
+                    <li>✅ Gourmet catering</li>
+                    <li>✅ Professional table setting</li>
+                </ul>
+            </div>
+            <a href="booking.html" class="book-now-btn">Book Now</a>
+        </div>
+
+        <div class="package-card luxury">
+            <span class="icon">🏆</span>
+            <h3>Luxury Package</h3>
+            <p>✅ All-inclusive with Photography & Entertainment</p>
+            <p class="price">INR1,50,000</p>
+            <div class="package-details">
+                <ul>
+                    <li>✅ Live band or DJ</li>
+                    <li>✅ High-end catering</li>
+                    <li>✅ Professional photography & videography</li>
+                    <li>✅ Special lighting effects</li>
+                </ul>
+            </div>
+            <a href="booking.html" class="book-now-btn">Book Now</a>
+        </div>
+    </div>
+</section>
+
+<section id="virtual-preview">
+    <h2>Virtual Event Preview</h2>
+    <p>Choose a theme to preview your event setup:</p>
+    <div class="preview-options">
+        <button onclick="changePreview('img1.jpg')">Classic Wedding</button>
+        <button onclick="changePreview('img2.jpg')">Corporate Event</button>
+        <button onclick="changePreview('img3.jpg')">Birthday Celebration</button>
+    </div>
+    <div class="preview-container">
+        <img id="preview-image" src="theme1.jpg" alt="Event Preview">
+    </div>
+</section>
+
+<script>
+    function changePreview(imageSrc) {
+        document.getElementById('preview-image').src = imageSrc;
+    }
+</script>
+
+<section id="social-section">
+    <div class="logo-thought">
+        <div class="logo-left">
+            <span class="krl">KRL</span>
+            <span class="events">events</span>
+        </div>
+        <div class="logo-divider"></div>
+        <div class="logo-right">
+            <span>growth &</span><br>
+            <span>event planning</span><br>
+            <span>solutions for all</span>
+        </div>
+    </div>
+    <h3>STAY SOCIAL</h3>
+    <h2>Follow Us On Instagram</h2>
+    <div class="social-images">
+        <a href="https://instagram.com/youreventpage" target="_blank">
+            <img src="https://i.pinimg.com/736x/48/c3/1d/48c31da3a8bcce6bd265b3d106154e70.jpg" alt="Event 1">
+        </a>
+        <a href="https://instagram.com/youreventpage" target="_blank">
+            <img src="https://i.pinimg.com/736x/3d/93/83/3d9383bff4d1e934947be5177cc56ef6.jpg" alt="Event 2">
+        </a>
+        <a href="https://instagram.com/youreventpage" target="_blank">
+            <img src="https://i.pinimg.com/736x/0a/3f/79/0a3f79a2dab7347a63a1052caa7dc244.jpg" alt="Event 3">
+        </a>
+    </div>
+</section>
+<div class="footer-container">
+    <p>COPYRIGHT © 2025 KRL EVENTS</p>
+    <div class="footer-logo">
+        <p>WEDDINGS & EVENTS<br>Kurnool, Andhra Pradesh</p>
+        <p>ESTD 1995</p>
+    </div>
+</div>
+</body>
+</html>

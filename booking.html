@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Your Event</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header>
+<div class="logo-container">
+        <img src="https://i.pinimg.com/736x/8d/5d/db/8d5ddba18226ec27dff50b244617471f.jpg" alt="Event Logo" class="logo">
+        <h1>KRL</h1>
+
+<nav class="navbar">
+    <ul class="nav-left">
+        <li><a href="webs.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+    </ul>
+    <div class="logo">
+        <span>KRL <span class="highlight">events</span></span>
+    </div>
+    <ul class="nav-right">
+        <li><a href="packages.html">Packages</a></li>	
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+	 <div class="auth-buttons">
+        <button onclick="location.href='login.html'">Login</button>
+        <button onclick="location.href='signup.html'">Signup</button>
+    </div>
+	  </div>
+</header>
+</header>
+
+<section id="booking-form" class="booking-form">
+    <h2>Book Your Event Today</h2>
+    <form id="eventForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="event-date">Event Date:</label>
+        <input type="date" id="event-date" name="event_date" required>
+
+        <label for="package">Select Package:</label>
+        <select id="package" name="package" required>
+            <option value="">Select a Package</option>
+            <option value="basic">Basic Package</option>
+            <option value="premium">Premium Package</option>
+            <option value="luxury">Luxury Package</option>
+        </select>
+
+        <label for="message">Additional Details:</label>
+        <textarea id="message" name="message" rows="4" placeholder="Add any special requests..." required></textarea>
+
+        <!-- Payment Section -->
+        <h2>Select Payment Method</h2>
+        <div class="payment-options">
+            <label>
+                <input type="radio" name="payment_method" value="credit_card" required>
+                <img src="https://cdn-icons-png.flaticon.com/128/349/349221.png" alt="Credit Card">
+                Credit Card
+            </label>
+            <label>
+                <input type="radio" name="payment_method" value="paypal" required>
+                <img src="https://cdn-icons-png.flaticon.com/128/888/888859.png" alt="PayPal">
+                PayPal
+            </label>
+            <label>
+                <input type="radio" name="payment_method" value="bank_transfer" required>
+                <img src="https://cdn-icons-png.flaticon.com/128/64/64673.png" alt="Bank Transfer">
+                Bank Transfer
+            </label>
+        </div>
+
+        <button type="submit" id="submit-btn" disabled>Confirm Booking</button>
+    </form>
+
+    <!-- Success Message -->
+    <div id="success-message" style="display: none; margin-top: 20px; text-align: center;">
+        <h3>Thank you for booking with KRL Events!</h3>
+        <p>We will get in touch with you soon.</p>
+    </div>
+</section>
+
+<section id="social-section">
+    <div class="logo-thought">
+        <div class="logo-left">
+            <span class="krl">KRL</span>
+            <span class="events">events</span>
+        </div>
+        <div class="logo-divider"></div>
+        <div class="logo-right">
+            <span>growth &</span><br>
+            <span>event planning</span><br>
+            <span>solutions for all</span>
+        </div>
+    </div>
+    <h3>STAY SOCIAL</h3>
+    <h2>Follow Us On Instagram</h2>
+    <div class="social-images">
+        <a href="https://instagram.com/youreventpage" target="_blank">
+            <img src="https://i.pinimg.com/736x/48/c3/1d/48c31da3a8bcce6bd265b3d106154e70.jpg" alt="Event 1">
+        </a>
+        <a href="https://instagram.com/youreventpage" target="_blank">
+            <img src="https://i.pinimg.com/736x/3d/93/83/3d9383bff4d1e934947be5177cc56ef6.jpg" alt="Event 2">
+        </a>
+        <a href="https://instagram.com/youreventpage" target="_blank">
+            <img src="https://i.pinimg.com/736x/0a/3f/79/0a3f79a2dab7347a63a1052caa7dc244.jpg" alt="Event 3">
+        </a>
+        <a href="https://instagram.com/youreventpage" target="_blank">
+            <img src="https://i.pinimg.com/736x/8e/d2/e4/8ed2e41d69cb80196defe8d1a315f3c3.jpg" alt="Event 4">
+        </a>
+        <a href="https://instagram.com/youreventpage" target="_blank">
+            <img src="https://i.pinimg.com/736x/95/0f/ef/950fef3be1f84f45e1f5b954fe8b91dc.jpg" alt="Event 5">
+        </a>
+    </div>
+</section>
+
+
+<div class="footer-container">
+    <p>COPYRIGHT © 2025 KRL EVENTS</p>
+    <div class="footer-logo">
+        <p>WEDDINGS & EVENTS<br>Kurnool, Andhra Pradesh</p>
+        <p>ESTD 1995</p>
+    </div>
+</div>
+<script>
+    const form = document.getElementById('eventForm');
+    const submitBtn = document.getElementById('submit-btn');
+
+    function checkFormValidity() {
+        if (form.checkValidity()) {
+            submitBtn.disabled = false;
+        } else {
+            submitBtn.disabled = true;
+        }
+    }
+
+    form.addEventListener('input', checkFormValidity);
+    form.addEventListener('change', checkFormValidity);
+
+    form.onsubmit = function(event) {
+        event.preventDefault();
+        form.style.display = 'none';
+        document.getElementById('success-message').style.display = 'block';
+    };
+</script>
+
+</body>
+</html>

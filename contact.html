@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Royal Events</title>
+    <link rel="stylesheet" href="style.css">
+	<style>
+.contact-section {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 40px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.contact-section h2 {
+    color: #333;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.contact-section p {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+
+.contact-section .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.contact-section label {
+    display: block;
+    font-size: 14px;
+    color: #444;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.contact-section input,
+.contact-section textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact-section textarea {
+    resize: none;
+}
+
+
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background: #d32f2f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    background: #b71c1c;
+}
+
+
+@media (max-width: 768px) {
+    .contact-section {
+        width: 90%;
+        padding: 20px;
+    }
+}
+</style>
+
+</head>
+<body>
+<header>
+    <div class="logo-container">
+      <img src="https://i.pinimg.com/736x/8d/5d/db/8d5ddba18226ec27dff50b244617471f.jpg" alt="Event Logo" class="logo">
+      <h1>KRL</h1>
+      <!-- Hamburger Icon -->
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+      
+      <nav class="navbar" id="navMenu">
+        <ul class="nav-left">
+          <li><a href="webs.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+        <div class="logo">
+          <span>KRL <span class="highlight">events</span></span>
+        </div>
+        <ul class="nav-right">
+          <li><a href="packages.html">Packages</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      
+      <div class="auth-buttons">
+        <button onclick="location.href='login.html'">Login</button>
+        <button onclick="location.href='signup.html'">Signup</button>
+      </div>
+    </div>
+  </header>
+<div>
+<section class="contact-section">
+    <h2>Contact Us</h2>
+    <p>Have any questions? Feel free to reach out to us, and we’ll get back to you as soon as possible.</p>
+    
+    <form id="contactForm">
+    <div class="form-group">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+    </div>
+
+    <div class="form-group">
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+    </div>
+
+    <div class="form-group">
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+    </div>
+
+    <div class="form-group">
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" placeholder="Enter the subject" required>
+    </div>
+
+    <div class="form-group">
+        <label for="message">Your Message:</label>
+        <textarea id="message" name="message" rows="5" placeholder="Type your message here..." required></textarea>
+    </div>
+
+    <button type="submit" class="submit-btn">Send Message</button>
+</form>
+
+<!-- Thank You Message -->
+<div id="thankYouMessage" style="display: none; text-align: center; margin-top: 20px; color: green; font-size: 18px;">
+    ✅ Thank you for contacting <b>KRL Events</b>! We will get back to you soon.
+</div>
+
+</section>
+<section id="social-section">
+    <div class="logo-thought">
+        <div class="logo-left">
+            <span class="krl">KRL</span>
+            <span class="events">events</span>
+        </div>
+        <div class="logo-divider"></div>
+        <div class="logo-right">
+            <span>growth &</span><br>
+            <span>event planning</span><br>
+            <span>solutions for all</span>
+        </div>
+    </div>
+    <h3>STAY SOCIAL</h3>
+    <h2>Follow Us On Instagram</h2>
+    <div class="social-images">
+        <a href="https://instagram.com/youreventpage" target="_blank">
+            <img src="https://i.pinimg.com/736x/48/c3/1d/48c31da3a8bcce6bd265b3d106154e70.jpg" alt="Event 1">
+        </a>
+        <a href="https://instagram.com/youreventpage" target="_blank">
+            <img src="https://i.pinimg.com/736x/3d/93/83/3d9383bff4d1e934947be5177cc56ef6.jpg" alt="Event 2">
+        </a>
+        <a href="https://instagram.com/youreventpage" target="_blank">
+            <img src="https://i.pinimg.com/736x/0a/3f/79/0a3f79a2dab7347a63a1052caa7dc244.jpg" alt="Event 3">
+        </a>
+    </div>
+</section>
+<div class="footer-container">
+    <p>COPYRIGHT © 2025 KRL EVENTS</p>
+    <div class="footer-logo">
+        <p>WEDDINGS & EVENTS<br>Kurnool, Andhra Pradesh</p>
+        <p>ESTD 1995</p>
+    </div>
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevents page from reloading
+
+    // Hide the form and show the thank-you message
+    document.getElementById("contactForm").style.display = "none";
+    document.getElementById("thankYouMessage").style.display = "block";
+
+    // Reset the form (optional)
+    setTimeout(function() {
+        document.getElementById("contactForm").reset();
+        document.getElementById("contactForm").style.display = "block";
+        document.getElementById("thankYouMessage").style.display = "none";
+    }, 5000); // Message disappears after 5 seconds
+});
+
+function toggleMenu() {
+      const navMenu = document.getElementById('navMenu');
+      navMenu.classList.toggle('active');
+    }
+
+function toggleMenu() {
+      const navMenu = document.getElementById('navMenu');
+      navMenu.classList.toggle('active');
+    }
+	
+	</script>
+
+
+</body>
+</html>

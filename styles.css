@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Your Event</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- Header Section -->
+<header>
+    <div class="logo-container">
+        <img src="https://i.pinimg.com/736x/8d/5d/db/8d5ddba18226ec27dff50b244617471f.jpg" alt="Event Logo" class="logo">
+        <h1>KRL</h1>
+        <nav class="navbar">
+            <ul class="nav-left">
+                <li><a href="webs.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="packages.html">Packages</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+            <div class="logo">
+                <span>KRL <span class="highlight">events</span></span>
+            </div>
+            <ul class="nav-right">
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="booking.html">Book Now</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="admin.html">Admin</a></li>
+            </ul>
+        </nav>
+        <div class="auth-buttons">
+            <button onclick="location.href='login.html'">Login</button>
+            <button onclick="location.href='signup.html'">Signup</button>
+        </div>
+    </div>
+</header>
+
+<!-- Step 1: Booking Form -->
+<section id="step1">
+    <h2>Book Your Event Today</h2>
+    <form action="#step2" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" required>
+        
+        <label for="event-date">Event Date:</label>
+        <input type="date" id="event-date" name="event_date" required>
+        
+        <label for="package">Select Package:</label>
+        <select id="package" name="package" required>
+            <option value="basic">Basic Package</option>
+            <option value="premium">Premium Package</option>
+            <option value="luxury">Luxury Package</option>
+        </select>
+        
+        <label for="message">Additional Details:</label>
+        <textarea id="message" name="message" rows="5"></textarea>
+        
+        <button type="submit">Proceed to Payment</button>
+    </form>
+</section>
+
+<!-- Step 2: Payment Section -->
+<section id="step2" class="payment-section">
+    <h2>Select Payment Method</h2>
+    <form action="#success" method="POST" onsubmit="alert('Booking Successful!')">
+        <label>
+            <input type="radio" name="payment_method" value="credit_card" required>
+            <img src="https://cdn-icons-png.flaticon.com/128/349/349221.png" alt="Credit Card" class="payment-icon">
+            Credit Card
+        </label>
+        <label>
+            <input type="radio" name="payment_method" value="paypal" required>
+            <img src="https://cdn-icons-png.flaticon.com/128/888/888859.png" alt="PayPal" class="payment-icon">
+            PayPal
+        </label>
+        <label>
+            <input type="radio" name="payment_method" value="bank_transfer" required>
+            <img src="https://cdn-icons-png.flaticon.com/128/64/64673.png" alt="Bank Transfer" class="payment-icon">
+            Bank Transfer
+        </label>
+        <button type="submit">Confirm Payment</button>
+    </form>
+</section>
+
+<!-- Step 3: Success Message -->
+<section id="success" class="success-message">
+    <h2>Booking Successful!</h2>
+    <p>Thank you for booking with KRL Events. We will get in touch with you soon.</p>
+</section>
+
+<!-- Social Section -->
+<section id="social-section">
+    <div class="logo-thought">
+        <div class="logo-left">
+            <span class="krl">KRL</span>
+            <span class="events">events</span>
+        </div>
+        <div class="logo-divider"></div>
+        <div class="logo-right">
+            <span>growth &</span><br>
+            <span>event planning</span><br>
+            <span>solutions for all</span>
+        </div>
+    </div>
+    <h3>STAY SOCIAL</h3>
+    <h2>Follow Us On Instagram</h2>
+    <div class="social-images">
+        <a href="https://instagram.com/youreventpage" target="_blank">
+            <img src="https://i.pinimg.com/736x/48/c3/1d/48c31da3a8bcce6bd265b3d106154e70.jpg" alt="Event 1">
+        </a>
+        <a href="https://instagram.com/youreventpage" target="_blank">
+            <img src="https://i.pinimg.com/736x/3d/93/83/3d9383bff4d1e934947be5177cc56ef6.jpg" alt="Event 2">
+        </a>
+        <a href="https://instagram.com/youreventpage" target="_blank">
+            <img src="https://i.pinimg.com/736x/0a/3f/79/0a3f79a2dab7347a63a1052caa7dc244.jpg" alt="Event 3">
+        </a>
+    </div>
+</section>
+
+<!-- Footer -->
+<div class="footer-container">
+    <p>COPYRIGHT © 2025 KRL EVENTS</p>
+    <div class="footer-logo">
+        <p>WEDDINGS & EVENTS<br>Kurnool, Andhra Pradesh</p>
+        <p>ESTD 1995</p>
+    </div>
+</div>
+
+</body>
+</html>

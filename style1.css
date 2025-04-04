@@ -1,0 +1,156 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(https://wallpapers.com/images/high/sunset-scenery-death-valley-51n76ruvjwn1gjm0.webp) no-repeat center/cover;
+    animation: fadeInBg 2s ease-in-out;
+}
+
+/* Login Wrapper */
+.wrapper {
+    width: 420px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(77, 184, 255, 0.6); /* Updated soft blue shadow */
+    opacity: 0;
+    transform: translateY(-30px);
+    animation: fadeIn 1.5s ease-in-out forwards, floating 3s ease-in-out infinite;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes floating {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+}
+
+@keyframes fadeInBg {
+    0% {
+        opacity: 0;
+        filter: blur(5px);
+    }
+    100% {
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+
+/* Heading */
+.wrapper h1 {
+    text-align: center;
+    font-size: 32px;
+    color: #ffffff;
+}
+
+/* Input Fields */
+.input-box {
+    position: relative;
+    margin: 20px 0;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    background: transparent;
+    border: 2px solid #4db8ff;
+    border-radius: 25px;
+    color: white;
+    outline: none;
+    transition: 0.3s;
+}
+
+.input-box input::placeholder {
+    font-size: 1rem;
+    color: #000000;
+}
+
+.input-box input:focus {
+    border-color: #74c0fc;
+    box-shadow: 0 0 10px rgba(116, 192, 252, 0.8); /* Glowing effect */
+}
+
+.input-box i {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+}
+
+/* Remember & Forgot */
+.remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin: -10px 0 15px;
+}
+
+.remember-forgot label input {
+    accent-color: #4db8ff;
+    margin-right: 5px;
+}
+
+.remember-forgot a {
+    color: #4db8ff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+    color: #74c0fc;
+}
+
+/* Login Button */
+.btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    background: #4db8ff;
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 0 15px rgba(77, 184, 255, 0.6);
+}
+
+.btn:hover {
+    background: #3aa7e8;
+    box-shadow: 0 0 20px rgba(58, 167, 232, 0.9);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .wrapper {
+        width: 90%;
+        padding: 20px;
+    }
+}

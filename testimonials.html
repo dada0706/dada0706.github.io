@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Testimonials</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+     <div class="logo-container">
+        <img src="https://i.pinimg.com/736x/8d/5d/db/8d5ddba18226ec27dff50b244617471f.jpg" alt="Event Logo" class="logo">
+        <h1>KRL</h1>
+
+        <nav class="navbar">
+            <ul class="nav-left">
+                <li><a href="webs.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+            <div class="logo">
+                <span>KRL <span class="highlight">events</span></span>
+            </div>
+            <ul class="nav-right">
+			 <li><a href="packages.html">Packages</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="auth-buttons">
+            <button onclick="location.href='login.html'">Login</button>
+            <button onclick="location.href='signup.html'">Signup</button>
+        </div>
+    </div>
+</header>
+<!-- Testimonials Carousel Section -->
+<section id="testimonials">
+    <h2>What Our Clients Say</h2>
+    <div class="testimonial-container">
+        <div class="testimonial-carousel">
+            <div class="testimonial-slide active">
+                <div class="testimonial-content">
+                    <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Client Photo" class="client-img">
+                    <div class="quote">"KRL Events transformed our wedding into a magical day we'll never forget. Their attention to detail and creative vision exceeded our expectations!"</div>
+                    <div class="client-name">- Priya & Rahul</div>
+                    <div class="event-type">Wedding | Bangalore</div>
+                    <div class="rating">★★★★★</div>
+                </div>
+            </div>
+            <div class="testimonial-slide">
+                <div class="testimonial-content">
+                    <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Client Photo" class="client-img">
+                    <div class="quote">"Our company's annual conference was flawlessly executed by KRL Events. The team handled everything professionally from start to finish."</div>
+                    <div class="client-name">- Vikram Shah</div>
+                    <div class="event-type">Corporate Event | Hyderabad</div>
+                    <div class="rating">★★★★★</div>
+                </div>
+            </div>
+            <div class="testimonial-slide">
+                <div class="testimonial-content">
+                    <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Client Photo" class="client-img">
+                    <div class="quote">"I couldn't have asked for a better team to organize my daughter's 16th birthday. The decorations were stunning and everything was perfect!"</div>
+                    <div class="client-name">- Lakshmi Reddy</div>
+                    <div class="event-type">Birthday Party | Kurnool</div>
+                    <div class="rating">★★★★★</div>
+                </div>
+            </div>
+        </div>
+        <div class="testimonial-controls">
+            <button class="prev-btn" onclick="moveTestimonial(-1)">❮</button>
+            <div class="testimonial-dots">
+                <span class="dot active" onclick="jumpToTestimonial(0)"></span>
+                <span class="dot" onclick="jumpToTestimonial(1)"></span>
+                <span class="dot" onclick="jumpToTestimonial(2)"></span>
+            </div>
+            <button class="next-btn" onclick="moveTestimonial(1)">❯</button>
+        </div>
+    </div>
+</section>
+<section id="social-section">
+    <div class="logo-thought">
+        <div class="logo-left">
+            <span class="krl">KRL</span>
+            <span class="events">events</span>
+        </div>
+        <div class="logo-divider"></div>
+        <div class="logo-right">
+            <span>growth &</span><br>
+            <span>event planning</span><br>
+            <span>solutions for all</span>
+        </div>
+    </div>
+    <h3>STAY SOCIAL</h3>
+    <h2>Follow Us On Instagram</h2>
+    <div class="social-images">
+        <a href="https://instagram.com/youreventpage" target="_blank">
+            <img src="https://i.pinimg.com/736x/48/c3/1d/48c31da3a8bcce6bd265b3d106154e70.jpg" alt="Event 1">
+        </a>
+        <a href="https://instagram.com/youreventpage" target="_blank">
+            <img src="https://i.pinimg.com/736x/3d/93/83/3d9383bff4d1e934947be5177cc56ef6.jpg" alt="Event 2">
+        </a>
+        <a href="https://instagram.com/youreventpage" target="_blank">
+            <img src="https://i.pinimg.com/736x/0a/3f/79/0a3f79a2dab7347a63a1052caa7dc244.jpg" alt="Event 3">
+        </a>
+        <a href="https://instagram.com/youreventpage" target="_blank">
+            <img src="https://i.pinimg.com/736x/8e/d2/e4/8ed2e41d69cb80196defe8d1a315f3c3.jpg" alt="Event 4">
+        </a>
+        <a href="https://instagram.com/youreventpage" target="_blank">
+            <img src="https://i.pinimg.com/736x/95/0f/ef/950fef3be1f84f45e1f5b954fe8b91dc.jpg" alt="Event 5">
+        </a>
+    </div>
+</section>
+
+<!-- Footer Section -->
+<div class="footer-container">
+    <p>COPYRIGHT © 2025 KRL EVENTS</p>
+    <div class="footer-logo">
+        <p>WEDDINGS & EVENTS<br>Kurnool, Andhra Pradesh</p>
+        <p>ESTD 1995</p>
+    </div>
+</div>
+<script>
+let currentTestimonialIndex = 0;
+const testimonialSlides = document.getElementsByClassName('testimonial-slide');
+const dots = document.getElementsByClassName('dot');
+
+function initTestimonials() {
+    testimonialSlides[0].classList.add('active');
+    dots[0].classList.add('active');
+}
+
+function jumpToTestimonial(index) {
+    for (let i = 0; i < testimonialSlides.length; i++) {
+        testimonialSlides[i].classList.remove('active');
+        dots[i].classList.remove('active');
+    }
+    
+    
+    currentTestimonialIndex = index;
+    testimonialSlides[currentTestimonialIndex].classList.add('active');
+    dots[currentTestimonialIndex].classList.add('active');
+}
+
+
+function moveTestimonial(direction) {
+    let newIndex = currentTestimonialIndex + direction;
+    
+   
+    if (newIndex >= testimonialSlides.length) {
+        newIndex = 0;
+    } else if (newIndex < 0) {
+        newIndex = testimonialSlides.length - 1;
+    }
+    
+    jumpToTestimonial(newIndex);
+}
+
+
+function autoRotateTestimonials() {
+    setInterval(() => {
+        moveTestimonial(1);
+    }, 5000);
+}
+
+</script>
+</body>
+</html>

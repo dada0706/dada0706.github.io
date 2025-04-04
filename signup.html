@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Form</title>
+    <link rel="stylesheet" href="style2.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="wrapper">
+        <form id="signupForm">
+            <h1>Sign Up</h1>
+            <div class="input-box">
+                <input type="text" id="username" placeholder="Username" required>
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="input-box">
+                <input type="email" id="email" placeholder="Email" required>
+                <i class='bx bxs-envelope'></i>
+            </div>
+            <div class="input-box">
+                <input type="password" id="password" placeholder="Password" required>
+                <i class="bx bxs-lock-alt"></i>
+            </div>
+            <div class="input-box">
+                <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+                <i class="bx bxs-lock-alt"></i>
+            </div>
+            <button type="submit" class="btn">Sign Up</button>
+            <p id="error-msg" style="color: red; text-align: center; margin-top: 10px;"></p>
+            <p>Already have an account? <a href="login.html">Login</a></p>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("signupForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form submission
+
+            let username = document.getElementById("username").value.trim();
+            let email = document.getElementById("email").value.trim();
+            let password = document.getElementById("password").value.trim();
+            let confirmPassword = document.getElementById("confirmPassword").value.trim();
+            let errorMsg = document.getElementById("error-msg");
+
+            // Check if user already exists
+            let existingUsers = JSON.parse(localStorage.getItem("users")) || [];
+            let userExists = existingUsers.some(user => user.email === email);
+
+            if (userExists) {
+                errorMsg.textContent = "User already exists! Please login.";
+                return;
+            }
+
+            // Validation checks
+            if (username === "" || email === "" || password === "" || confirmPassword === "") {
+                errorMsg.textContent = "All fields are required!";
+                return;
+            }
+
+            if (!/\S+@\S+\.\S+/.test(email)) {
+                errorMsg.textContent = "Invalid email format!";
+                return;
+            }
+
+            if (password.length < 6) {
+                errorMsg.textContent = "Password must be at least 6 characters!";
+                return;
+            }
+
+            if (password !== confirmPassword) {
+                errorMsg.textContent = "Passwords do not match!";
+                return;
+            }
+
+            // Store user in local storage
+            existingUsers.push({ username, email, password });
+            localStorage.setItem("users", JSON.stringify(existingUsers));
+
+            alert("Signup successful! Redirecting to login...");
+            window.location.href = "login.html";
+        });
+    </script>
+</body>
+</html>

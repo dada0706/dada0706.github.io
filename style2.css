@@ -1,0 +1,173 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    background: url(https://wallpapers.com/images/high/sunset-scenery-death-valley-51n76ruvjwn1gjm0.webp) no-repeat center/cover;
+}
+
+/* Navigation Bar */
+header {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.logo a {
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #4db8ff;
+}
+
+/* Form Wrapper */
+.wrapper {
+    width: 420px;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(77, 184, 255, 0.5); /* Updated soft blue shadow */
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.wrapper h1 {
+    text-align: center;
+    font-size: 32px;
+    color: #ffffff;
+}
+
+/* Input Fields */
+.input-box {
+    position: relative;
+    margin: 20px 0;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    background: transparent;
+    border: 2px solid #4db8ff;
+    border-radius: 25px;
+    color: white;
+    outline: none;
+    transition: 0.3s;
+}
+
+.input-box input:focus {
+    border-color: #74c0fc;
+    box-shadow: 0 0 10px rgba(116, 192, 252, 0.8); /* Updated glowing blue effect */
+}
+
+.input-box i {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+
+.input-box input::placeholder {
+    font-size: 1rem;
+    color: #000000;
+}
+}
+
+/* Button */
+.btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    background: #4db8ff;
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 0 15px rgba(77, 184, 255, 0.6); /* New soft blue shadow */
+}
+
+.btn:hover {
+    background: #3aa7e8;
+    box-shadow: 0 0 20px rgba(58, 167, 232, 0.9);
+}
+
+/* Login Link */
+.login-link {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+    color: white;
+}
+
+.login-link a {
+    color: #4db8ff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+    color: #74c0fc;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .wrapper {
+        width: 90%;
+        padding: 20px;
+    }
+    
+    nav ul {
+        display: none; /* Hide menu on small screens */
+    }
+}
