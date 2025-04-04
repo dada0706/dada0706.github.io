@@ -124,6 +124,10 @@
     </div>
 </div>
 <script>
+    function toggleMenu() {
+      const navMenu = document.getElementById('navMenu');
+      navMenu.classList.toggle('active');
+    }
 let currentTestimonialIndex = 0;
 const testimonialSlides = document.getElementsByClassName('testimonial-slide');
 const dots = document.getElementsByClassName('dot');
