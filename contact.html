@@ -160,6 +160,10 @@
 </div>
 
 <script>
+    function toggleMenu() {
+      const navMenu = document.getElementById('navMenu');
+      navMenu.classList.toggle('active');
+    }
 document.getElementById("contactForm").addEventListener("submit", function(event) {
     event.preventDefault(); // Prevent page reload
 
