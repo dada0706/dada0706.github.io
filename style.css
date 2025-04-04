@@ -168,15 +168,15 @@ margin :20px;/ reduced from 16px */
   .nav-left{
     flex-direction: column;
     align-items: center;
-    gap: 10x;
+    gap: 30x;
     width: 100%;
   }
   .nav-right {
     flex-direction: column;
     align-items: center;
-    gap: 0px;
+    gap: 10px;
     width: 100%;
-	margin-left:50px;
+	margin-left:5px;
   }
   
   .logo {
