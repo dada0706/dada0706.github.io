@@ -152,54 +152,6 @@ function toggleMenu() {
       const navMenu = document.getElementById('navMenu');
       navMenu.classList.toggle('active');
     }
-
-const images = [
-    'https://i.pinimg.com/736x/95/0f/ef/950fef3be1f84f45e1f5b954fe8b91dc.jpg',
-    'https://i.pinimg.com/736x/8e/d2/e4/8ed2e41d69cb80196defe8d1a315f3c3.jpg',
-    'https://i.pinimg.com/736x/0a/3f/79/0a3f79a2dab7347a63a1052caa7dc244.jpg',
-    'https://i.pinimg.com/736x/48/c3/1d/48c31da3a8bcce6bd265b3d106154e70.jpg'
-];
-
-let currentIndex = 0;
-
-function changeImage() {
-    const designSection = document.getElementById('design');
-    if (!designSection) return;
-
-    // Create a new overlay for smooth transition
-    const overlay = document.createElement('div');
-    overlay.classList.add('image-overlay');
-    overlay.style.backgroundImage = `url(${images[currentIndex]})`;
-
-    // Append overlay to the design section
-    designSection.appendChild(overlay);
-
-    // Apply fade-in effect
-    setTimeout(() => {
-        overlay.style.opacity = '1';
-        overlay.style.transform = 'scale(1)'; // Smooth zoom-in effect
-    }, 50);
-
-    // Change background after fade-in
-    setTimeout(() => {
-        designSection.style.backgroundImage = `url(${images[currentIndex]})`;
-        designSection.removeChild(overlay);
-
-        // Update to the next image
-        currentIndex = (currentIndex + 1) % images.length;
-    }, 2500);
-}
-
-// Start the slideshow every 6 seconds
-setInterval(changeImage, 6000);
-
-// Initial image change after load
-window.addEventListener('load', () => {
-    setTimeout(changeImage, 500);
-});
-
-
-
 	
  
 </script>
