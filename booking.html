@@ -135,6 +135,10 @@
     </div>
 </div>
 <script>
+      function toggleMenu() {
+      const navMenu = document.getElementById('navMenu');
+      navMenu.classList.toggle('active');
+    }
     const form = document.getElementById('eventForm');
     const submitBtn = document.getElementById('submit-btn');
 
@@ -155,10 +159,7 @@
         document.getElementById('success-message').style.display = 'block';
     };
 
-    function toggleMenu() {
-      const navMenu = document.getElementById('navMenu');
-      navMenu.classList.toggle('active');
-    }
+   
 </script>
 
 </body>
