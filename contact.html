@@ -178,7 +178,7 @@ document.getElementById("contactForm").addEventListener("submit", function(event
     // Name validation (only letters, min 3 characters)
     let namePattern = /^[A-Za-z\s]{3,}$/;
     if (!namePattern.test(name)) {
-        document.getElementById("nameError").textContent = "❌ Name must be at least 3 letters.";
+        document.getElementById("nameError").textContent = " Name must be at least 3 letters.";
         isValid = false;
     } else {
         document.getElementById("nameError").textContent = "";
@@ -187,7 +187,7 @@ document.getElementById("contactForm").addEventListener("submit", function(event
     // Email validation
     let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailPattern.test(email)) {
-        document.getElementById("emailError").textContent = "❌ Invalid email format.";
+        document.getElementById("emailError").textContent = " Invalid email format.";
         isValid = false;
     } else {
         document.getElementById("emailError").textContent = "";
@@ -196,7 +196,7 @@ document.getElementById("contactForm").addEventListener("submit", function(event
     // Phone number validation (only 10 digits)
     let phonePattern = /^[0-9]{10}$/;
     if (!phonePattern.test(phone)) {
-        document.getElementById("phoneError").textContent = "❌ Phone must be exactly 10 digits.";
+        document.getElementById("phoneError").textContent = "Phone must be exactly 10 digits.";
         isValid = false;
     } else {
         document.getElementById("phoneError").textContent = "";
@@ -204,7 +204,7 @@ document.getElementById("contactForm").addEventListener("submit", function(event
 
     // Subject validation
     if (subject.length < 5) {
-        document.getElementById("subjectError").textContent = "❌ Subject must be at least 5 characters.";
+        document.getElementById("subjectError").textContent = " Subject must be at least 5 characters.";
         isValid = false;
     } else {
         document.getElementById("subjectError").textContent = "";
@@ -212,7 +212,7 @@ document.getElementById("contactForm").addEventListener("submit", function(event
 
     // Message validation
     if (message.length < 10) {
-        document.getElementById("messageError").textContent = "❌ Message must be at least 10 characters.";
+        document.getElementById("messageError").textContent = " Message must be at least 10 characters.";
         isValid = false;
     } else {
         document.getElementById("messageError").textContent = "";
